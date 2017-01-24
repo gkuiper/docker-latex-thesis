@@ -15,4 +15,4 @@ before_install:
   - patch thesis/Makefile Makefile.patch
 
 script:
-  - docker run -it -v $(pwd)/thesis:/data guusk/docker-latex-thesis make fonts acrotex all
+  - docker run -it -v $(pwd)/thesis:/data guusk/docker-latex-thesis make fonts acrotex
