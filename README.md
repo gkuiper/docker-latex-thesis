@@ -12,5 +12,5 @@ docker run -it -v $(pwd):/data guusk/docker-latex-thesis make help
 
 To build the template run:
 ```bash
-docker run -it -v $(pwd):/data guusk/docker-latex-thesis make fonts all
+docker run -it -v $(pwd):/data guusk/docker-latex-thesis make fonts acrotex all
 ```
