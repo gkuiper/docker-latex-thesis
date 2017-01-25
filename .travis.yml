@@ -12,6 +12,7 @@ cache:
 before_install:
   - docker build -t guusk/docker-latex-thesis .
   - curl 'https://doc-0c-1k-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/uu4hp4hrr411bfjcnbumjjp1uavu8tce/1485252000000/16707432501306151039/*/0B7bZxrrWASRvdmFGbEstNE9EQk0?e=download' | tar xz
+  - tar xfz thesis-src.tgz
   - patch thesis/Makefile Makefile.patch
 
 script:
