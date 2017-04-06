@@ -16,6 +16,7 @@ RUN apt-get update -q && apt-get install -qy --no-install-recommends \
             unzip \
             xzdec \
             ghostscript \
+            sudo \
     &&  rm -rf /var/lib/apt/lists/*
 
 RUN echo "Europe/Amsterdam" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
