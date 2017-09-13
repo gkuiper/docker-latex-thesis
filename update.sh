@@ -38,4 +38,10 @@ RUN apt-get update -q && apt-get install -qy --no-install-recommends \\
 
 RUN echo "Europe/Amsterdam" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 EOD
+	if [ "$version" -eq 2016 ]; then
+	    cat >> "$version/Dockerfile" <<EOD
+
+RUN tlmgr update --self && tlmgr install siunitx algorithm2e
+EOD
+    fi
 done

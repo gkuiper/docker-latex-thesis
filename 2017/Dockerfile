@@ -3,7 +3,7 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM guusk/docker-texlive:2016
+FROM guusk/docker-texlive:2017
 MAINTAINER Guus Kuiper <guuskuiper@gmail.com>
 
 RUN apt-get update -q && apt-get install -qy --no-install-recommends \
@@ -20,5 +20,3 @@ RUN apt-get update -q && apt-get install -qy --no-install-recommends \
     &&  rm -rf /var/lib/apt/lists/*
 
 RUN echo "Europe/Amsterdam" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
-
-RUN tlmgr update --self && tlmgr install siunitx algorithm2e

@@ -18,3 +18,6 @@ for version in "${versions[@]}"; do
     docker build -t $username/$image:$version $version/;
 done
 
+if [ ${#versions[@]} -gt 1 ]; then
+    docker tag $username/$image:${versions[0]} $username/$image:latest
+fi
